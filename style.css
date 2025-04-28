@@ -1,0 +1,258 @@
+.uno{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    animation: escalar 2s infinite; /*NOMBRE DE LA ANIMACIO, DURACION/TIEMPO, LOOP*/
+}
+.menu{
+    height: 50px;
+    width: 900px;
+    background-color: black;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-left: 30px;
+}
+
+.btn{
+    background-color: yellowgreen;
+    color: black;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+.btn:hover{
+    background-color: aqua;
+}
+
+ /* Pseudo-clase :hover */
+ .resaltado:hover {
+    background-color: yellow;
+  }
+
+  /* Pseudo-clases */
+  p:first-child {
+    color: green;
+  }
+
+  a:visited {
+    color: purple;
+  }
+
+  /* Selector de atributo */
+  a[target="_blank"] {
+    text-decoration: underline;
+    color: blue;
+  }
+
+  /* Selectores de relación */
+  /* Hijo directo */
+  div > span {
+    font-weight: bold;
+  }
+
+  /* Hermano general */
+  h2 ~ p {
+    font-style: italic;
+  }
+
+  /* Hermano adyacente */
+  h2 + p {
+    color: red;
+  }
+  #slideshow {
+    text-align: center;
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin-bottom: 400px;
+  }
+   
+  .slide-wrapper {
+    width: 2912px;
+    animation: slide 18s ease infinite;
+  }
+   
+  .slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+  }
+   
+  .slide:nth-child(1) { /*Elementos de una etiqueta que estan dentro*/
+    background-color: rgb(216, 41, 243);
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/162/73/224/ciudad-gato-noche-varanda-wallpaper-preview.jpg);
+  }
+   
+  .slide:nth-child(2) {
+    background-color: coral;
+    background-image: url(https://wallpapers.com/images/featured/gato-kawaii-7va4ri70il24d2u7.jpg);
+
+  }
+   
+  .slide:nth-child(3) {
+    background-color: greenyellow;
+    background-image: url(https://wallpapers.com/images/hd/cat-desktop-1680-x-1050-wallpaper-1133k4cdtj2sjn2f.jpg);
+
+  }
+   
+  .slide:nth-child(4) {
+    background-color: brown;
+    background-image: url(https://us.123rf.com/450wm/credevlop/credevlop2302/credevlop230200010/198334596-un-gran-grupo-de-gatos-con-diferentes-colores-dibujos-animados-gato-personajes-de-patrones-sin.jpg?ver=6);
+
+  }
+   
+  @keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -728px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    70% {margin-left: -1456px;}
+    80% {margin-left: -2184px;}
+    90% {margin-left: -2184px;}
+  }
+
+@keyframes mover {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(100);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes rotar{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes escalar {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+nav {
+    background: blue;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+}
+a{
+    color: brown;
+    text-decoration: none;
+}
+ul{
+    list-style: none;    
+}
+header{
+    width: 1200px;
+    height: 200px;
+    background-color: blue;
+    margin: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+section{
+    width: 1200px;
+    height: 200px;
+    background-color: red;
+    margin: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+article{
+    width: 1200px;
+    height: 200px;
+    background-color:blanchedalmond;
+    margin: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+footer{
+    width: 1200px;
+    height: 200px;
+    background-color:burlywood;
+    margin: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.hermano{
+    width: 1200px;
+    height: 100px;
+    background-color: blueviolet;
+    margin: 30px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.header, section, article, footer {
+    width: 1200px;
+    height: 200px;
+    margin: 30px auto;
+    display: block;
+    text-align: center;
+    padding: 20px;
+}
+.txtcolor{
+    color: wheat;
+    background: #3a00ff;
+    background: linear-gradient(90deg,#3a00ff 0%, #00acff 80%);
+}
+.cuadrado{
+    width: 500px;
+    height: 300px;
+    background: #3a00ff;
+    background: linear-gradient(90deg,#3a00ff 0%, #00acff 80%); 
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding: 30px;
+    border: 10px solid crimson;
+    box-shadow: 20px 2px 5px 0px rgba(0,0,0,0.75);
+}
+iframe{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.tres{
+    color: brown;
+
+}
+.hermano{
+    width: 1200px;
+    height: 1100px;
+    margin: 30px auto;
+    display: block;
+    text-align: center;
+    padding: 20px;
+    transition: 1s ease;
+}
+
