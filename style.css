@@ -1,0 +1,221 @@
+header {
+    background: #e50914;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    box-shadow: 0 0 40px #e50914;
+  }
+  body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+  }
+  #slideshow {
+    text-align: center;
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin-bottom: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+   
+  .slide-wrapper {
+    width: 2912px;
+    animation: slide 18s ease infinite;
+  }
+   
+  .slide {
+    float: left;
+    height: 510px;
+    width: 728px;
+  }
+   
+  .slide:nth-child(1) { /*Elementos de una etiqueta que estan dentro*/
+   background-image: url(https://image.api.playstation.com/vulcan/img/rnd/202009/2508/PhvW3zkZYS0pZgqGNrqFCvH7.png);
+   background-size: contain;
+  }
+   
+  .slide:nth-child(2) {
+    background-image: url(https://niveloculto.com/wp-content/uploads/2020/08/SUPERHOT-MIND-CONTROL-DELETE-1-1.jpg);
+    background-size: contain;
+  }
+   
+  .slide:nth-child(3) {
+    background-image: url(https://image.api.playstation.com/vulcan/img/rnd/202009/2814/4qwNsvU9lZ9SliMTj0XPx3rb.jpg);
+    background-size: contain;
+  }
+   
+  .slide:nth-child(4) {
+    background-image: url(https://image.api.playstation.com/vulcan/ap/rnd/202006/3010/0WdqoUxcMbj4EeQEXG0nxqLr.jpg);
+    background-size: contain;
+  }
+   
+  @keyframes slide {
+    20% {margin-left: 0px;}
+    30% {margin-left: -728px;}
+    50% {margin-left: -728px;}
+    60% {margin-left: -1456px;}
+    70% {margin-left: -1456px;}
+    80% {margin-left: -2184px;}
+    90% {margin-left: -2184px;}
+  }
+  
+  header {
+    background: #e50914;
+    text-align: center;
+    padding: 60px 20px;
+    color: white;
+    box-shadow: 0 0 40px #e50914;
+  }
+  
+  header h1 {
+    font-size: 4rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+  .hero {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    color: #ff4e4e;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+  
+  .button {
+    background-color: #e50914;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #ff1e3c;
+    transform: scale(1.05);
+  }
+  
+  .features {
+    background-color: #111;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+  }
+  
+  .features h3 {
+    text-align: center;
+    color: #ff4e4e;
+    margin-bottom: 20px;
+  }
+  
+  .features ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  .features li {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    color: #ccc;
+  }
+  
+  .trailer {
+    text-align: center;
+    margin: 60px 0;
+  }
+  
+  .trailer h3 {
+    color: #ff4e4e;
+    margin-bottom: 20px;
+  }
+  
+  .trailer iframe {
+    max-width: 100%;
+    border: 2px solid #e50914;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background: #111;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    margin-top: 40px;
+  }
+  
+  footer a {
+    color: #e50914;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+/* css de la tienda/ segunda pagina */
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.producto {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  border: 2px solid #e50914;
+}
+
+.producto h3 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.producto p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #ff4e4e;
+}
+
+.volver {
+  text-align: center;
+  margin-bottom: 40px;
+}
