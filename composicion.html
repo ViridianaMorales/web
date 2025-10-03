@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composición Adaptativa</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #b3e5fc; 
+    }
+
+    .contenedor {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .contenedor img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .nubes {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 1000px;
+      z-index: 0;
+    }
+
+    .arbustos {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      z-index: 1;
+    }
+
+    .personaje {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-15%);
+      width: 200px;
+      max-width: 30%;
+      z-index: 2; 
+    }
+
+
+    @media (max-width: 768px) {
+      .nubes {
+        width: 90%;
+      }
+      .personaje {
+        width: 150px;
+        transform: translateX(-50%) translateY(-10%);
+      }
+    }
+
+  
+    @media (max-width: 480px) {
+      .nubes {
+        width: 100%;
+      }
+      .personaje {
+        width: 120px;
+        transform: translateX(-50%) translateY(-8%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor">
+    <img class="nubes" src="NUBES.png" alt="Nubes">
+    <img class="personaje" src="PERSONAJE.png" alt="Personaje">
+    <img  class="arbustos" src="ARBOLES.png" alt="Arbustos">
+  </div>
+</body>
+</html>
