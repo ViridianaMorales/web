@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composición Parallax</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #b3e5fc;
+      overflow-x: hidden;
+    }
+
+    .contenedor {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .contenedor img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .nubes {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      max-width: 1000px;
+      z-index: 0;
+    }
+
+    .arbustos {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      z-index: 1;
+    }
+
+    .personaje {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(-15%);
+      width: 200px;
+      max-width: 30%;
+      z-index: 2;
+    }
+    .img2{
+      width: 400%;     
+      max-width: 800%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+      border: 3px solid #333;
+      
+    }
+
+    @media (max-width: 768px) {
+      .nubes {
+        width: 90%;
+      }
+      .personaje {
+        width: 150px;
+        transform: translateX(-50%) translateY(-10%);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nubes {
+        width: 100%;
+      }
+      .personaje {
+        width: 120px;
+        transform: translateX(-50%) translateY(-8%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="contenedor" id="parallax-container">
+    <img class="nubes" src="NUBES.png" alt="Nubes" id="nubes">
+    <img class="personaje" src="PERSONAJE.png" alt="Personaje" id="personaje">
+    <img class="arbustos" src="ARBOLES.png" alt="Arbustos" id="arbustos">
+  </div>
+
+  <div class="contenedor">
+    <div class="img2">
+      <img src="parallax1.PNG">
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const nubes = document.getElementById('nubes');
+      const arbustos = document.getElementById('arbustos');
+      const personaje = document.getElementById('personaje');
+      const container = document.getElementById('parallax-container');
+
+      
+      const speedNubes = 0.4;
+      const speedArbustos = 0.2;
+      const speedPersonaje = 0.1;
+
+      function updateParallax() {
+        const scrollOffset = container.getBoundingClientRect().top;
+
+        // Mantiene los tamaños y posiciones, solo añade movimiento vertical
+        nubes.style.transform = `translateX(-50%) translateY(${scrollOffset * speedNubes}px)`;
+        arbustos.style.transform = `translateX(-50%) translateY(${scrollOffset * speedArbustos}px)`;
+        personaje.style.transform = `translateX(-50%) translateY(calc(-15% + ${scrollOffset * speedPersonaje}px))`;
+      }
+
+      window.addEventListener('scroll', updateParallax);
+      updateParallax();
+    });
+  </script>
+</body>
+</html>
